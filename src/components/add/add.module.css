@@ -1,0 +1,23 @@
+.button {
+  margin-top: 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0b1020;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  padding: 8px 12px;
+  min-width: 140px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  background: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}

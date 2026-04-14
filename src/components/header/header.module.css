@@ -1,0 +1,116 @@
+.header {
+  height: 7vh;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.title {
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.profile {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow {
+  transform: rotate(180deg)
+}
+
+.menu {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 12px); /* выводим меню вправо, в свободную область */
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  min-width: 160px;
+  padding: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  z-index: 20;
+}
+
+.noMenu {
+  display: none;
+}
+
+.menu::before {
+  z-index: 0;
+  content: '';
+  display: block;
+  height: 11px;
+  width: 11px;
+  background-color: rgba(255,255,255,0.92);
+  position: absolute;
+  top: 14px;
+  left: -5px; /* стрелка слева к кнопке */
+  transform: rotate(45deg);
+}
+
+.menu>a {
+  padding: 6px 8px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: left;
+  text-decoration: none;
+  color: #0b1020;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.menu>a:hover {
+  background-color: rgba(0,0,0,0.08);
+  color: #0b1020;
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    display: none;
+  }
+
+  .container {
+    justify-content: end;
+  }
+}
+
+/* Фолбэк: на узких/средних экранах выводим под кнопкой */
+@media screen and (max-width: 1280px) {
+  .menu {
+    left: auto;
+    right: 0;
+    top: 37px;
+    border-radius: 16px;
+  }
+  .menu::before {
+    top: -5px;
+    left: 67px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+  }
+}

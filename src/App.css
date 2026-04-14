@@ -1,0 +1,19 @@
+* {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+}
+body, html, #root, .app {
+  background-color: #79b6e7;
+}
+
+header, footer, [class*="header"], [class*="footer"] {
+  background-color: #0067A3 !important;
+}
