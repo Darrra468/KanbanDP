@@ -1,7 +1,3 @@
-# SF Kanban Board
-
-Live: https://SanyBlagorodny.github.io/SF-Kanban-board/?v=20251106-1
-
 ## О проекте
 Одностраничное приложение Канбан на React с локальной аутентификацией, мультиязычностью и перетаскиванием задач (desktop + mobile). Современный стеклянный UI и анимированный WebGL‑фон.
 
