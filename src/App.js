@@ -84,6 +84,22 @@ function App() {
     setLoading(false);
   }, [])
 
+  useEffect(() => {
+  
+  if (!localStorage.getItem('user')) {
+    const testUser = {
+      login: 'test@test.com',
+      firstName: 'Тест',
+      lastName: 'Тестовый',
+      email: 'test@test.com',
+      color: '#0067A3',
+      password: '123456'
+    };
+    localStorage.setItem('user', JSON.stringify(testUser));
+    console.log('✅ Тестовый пользователь создан: test@test.com / 123456');
+  }
+}, []);
+
   if (isLoading) {
     return <Loader />
   }
